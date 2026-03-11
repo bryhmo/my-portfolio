@@ -2,7 +2,7 @@
 
 > Personal portfolio website showcasing my work, skills, and services as a Full Stack Developer & Lecturer from Nigeria.
 
-🌐 **Live Site:** [your-portfolio-link.vercel.app](https://your-portfolio-link.vercel.app)
+🌐 **Live Site:** https://my-portfolio-orcin-xi-55.vercel.app/
 
 ---
 
