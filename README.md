@@ -55,7 +55,7 @@ To run this project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/my-portfolio.git
+git clone https://github.com/bryhmo/my-portfolio
 
 # Open in browser
 cd my-portfolio
@@ -70,7 +70,7 @@ Or simply open `index.html` in any browser — no build tools or installation ne
 
 The portfolio includes a payment section powered by **Flutterwave** and **Paystack** for clients to pay directly in Nigerian Naira (₦).
 
-To activate payments, replace the placeholder keys in `index.html`:
+To activate payments, replace the placeholder keys in `script.js`:
 ```javascript
 // Flutterwave
 public_key: "YOUR_FLUTTERWAVE_PUBLIC_KEY"
@@ -96,16 +96,16 @@ Get your keys at:
 
 ## 📬 Contact
 
-- 📧 Email: isiakaibrahim@email.com
+- 📧 Email: isiakaibrahim17@gmail.com,codewithbryhmo@gmail.com
 - 🌍 Location: Nigeria
-- 💼 LinkedIn: [your-linkedin-url]
-- 🐙 GitHub: [github.com/your-username](https://github.com/your-username)
+- 💼 LinkedIn: www.linkedin.com/in/techwithbrymo
+- 🐙 GitHub: https://github.com/bryhmo
 
 ---
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available for use .
 
 ---
 
