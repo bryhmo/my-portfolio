@@ -2,7 +2,7 @@
 
 > Personal portfolio website showcasing my work, skills, and services as a Full Stack Developer & Lecturer from Nigeria.
 
-🌐 **Live Site:** https://my-portfolio-orcin-xi-55.vercel.app/
+🌐 **Live Site:** https://portfolio-isiaka-ibrahim.vercel.app/
 
 ---
 
@@ -37,7 +37,6 @@ I'm a Nigerian full-stack developer and lecturer holding a **B.Tech in Computer 
 | Vercel | Hosting & Deployment |
 
 ---
-
 ## 📁 Project Structure
 
 ```
