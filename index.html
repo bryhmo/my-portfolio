@@ -3,24 +3,38 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Isiaka Ibrahim — Full Stack Developer</title>
+  <title>Isiaka Ibrahim Abdulroheem — Full Stack Developer & Lecturer</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
+<nav id="navbar">
   <a href="#" class="nav-logo">II.</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
     <li><a href="#payment">Hire Me</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Get In Touch</a>
+  <button class="nav-burger" onclick="toggleMenu()">☰</button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#skills" onclick="toggleMenu()">Skills</a>
+  <a href="#experience" onclick="toggleMenu()">Experience</a>
+  <a href="#projects" onclick="toggleMenu()">Projects</a>
+  <a href="#certifications" onclick="toggleMenu()">Certifications</a>
+  <a href="#payment" onclick="toggleMenu()">Hire Me</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -28,17 +42,28 @@
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
   <div class="hero-content">
-    <div class="hero-badge">Available for freelance & remote work</div>
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Available for freelance & remote work
+    </div>
     <h1>
       Isiaka <span class="name-accent">Ibrahim</span><br>
-      <span class="line2">Full Stack Developer</span>
+      <span class="line2">Abdulroheem</span>
     </h1>
+    <div class="hero-roles">
+      <span class="role-tag">Full Stack Developer</span>
+      <span class="role-divider">·</span>
+      <span class="role-tag">Lecturer</span>
+      <span class="role-divider">·</span>
+      <span class="role-tag">Software Engineer</span>
+    </div>
     <p class="hero-desc">
-      Nigerian full-stack developer & lecturer building scalable web applications with modern technologies. I turn complex problems into elegant, production-ready solutions.
+      Nigerian full-stack developer & lecturer with a <strong>B.Tech in Computer Science</strong> and <strong>M.Sc in Software Engineering</strong>. I build scalable web applications, teach practical development, and turn complex problems into elegant solutions.
     </p>
     <div class="hero-actions">
       <a href="#projects" class="btn-primary">View My Work →</a>
       <a href="#contact" class="btn-secondary">Let's Talk</a>
+      <a href="#certifications" class="btn-outline">25+ Certifications</a>
     </div>
     <div class="hero-stats">
       <div class="stat">
@@ -53,6 +78,10 @@
         <div class="stat-num">100<span>+</span></div>
         <div class="stat-label">Students Taught</div>
       </div>
+      <div class="stat">
+        <div class="stat-num">25<span>+</span></div>
+        <div class="stat-label">Certifications</div>
+      </div>
     </div>
   </div>
 </section>
@@ -64,37 +93,126 @@
     <div class="about-visual reveal">
       <div class="about-card">
         <div class="about-avatar">II</div>
-        <h3>Isiaka Ibrahim</h3>
+        <h3>Isiaka Ibrahim Abdulroheem</h3>
         <div class="role">Full Stack Developer & Lecturer</div>
-        <p style="color:#8aa4b8; font-size:0.88rem;">Based in Nigeria 🇳🇬</p>
+        <p style="color:#8aa4b8; font-size:0.88rem; margin-bottom:16px;">📍 Abuja, Nigeria 🇳🇬 · Available Remotely</p>
         <div class="about-tag-list">
           <span class="about-tag">React.js</span>
           <span class="about-tag">Next.js</span>
           <span class="about-tag">NestJS</span>
           <span class="about-tag">Laravel</span>
           <span class="about-tag">Node.js</span>
+          <span class="about-tag">PHP</span>
           <span class="about-tag">MySQL</span>
+          <span class="about-tag">Python</span>
+        </div>
+        <div class="about-links">
+          <a href="https://github.com/bryhmo" target="_blank" class="about-social">GitHub</a>
+          <a href="https://www.linkedin.com/in/techwithbrymo" target="_blank" class="about-social">LinkedIn</a>
+          <a href="https://wa.me/2347039443182" target="_blank" class="about-social">WhatsApp</a>
         </div>
       </div>
     </div>
     <div class="about-text reveal">
       <div class="section-label">About Me</div>
       <h2 class="section-title">Developer.<br>Educator. Builder.</h2>
-      <p>I'm a <span class="about-highlight">Nigerian full-stack developer and lecturer</span> specializing in modern web technologies. I build scalable web applications and teach practical software development to students and aspiring developers.</p>
-      <p>My stack spans both frontend and backend — from crafting beautiful interfaces with <span class="about-highlight">React.js and Next.js</span>, to building robust APIs with <span class="about-highlight">NestJS, Node.js, and Laravel</span>.</p>
-      <p>I'm passionate about <span class="about-highlight">open knowledge sharing</span> and solving real-world problems through clean, maintainable code. Whether it's a startup MVP or a classroom lesson, I bring the same energy to both.</p>
-      <div style="margin-top: 32px;">
+      <p>I'm a <span class="about-highlight">Nigerian full-stack developer and lecturer</span> holding a <span class="about-highlight">B.Tech in Computer Science (IT Option)</span> from FUTA and an <span class="about-highlight">M.Sc in Software Engineering</span> from Nasarawa State University Keffi.</p>
+      <p>I currently lecture at <span class="about-highlight">Lincoln College of Science, Management and Technology</span>, Abuja — a pioneering institution with an <span class="about-highlight">80% practical curriculum</span>, training students to be job creators, not job seekers.</p>
+      <p>My stack spans the full spectrum — from crafting beautiful interfaces with <span class="about-highlight">React.js, Next.js and Tailwind</span>, to building robust APIs with <span class="about-highlight">NestJS, Laravel and Node.js</span>. I've built real production systems including an e-commerce platform, hospital management system, and more.</p>
+      <p>I hold <span class="about-highlight">25+ certifications</span> from IBM, Coursera and Udemy — covering everything from AI/ML to Agile, Python, Java, web performance, and cybersecurity.</p>
+      <div style="margin-top: 32px; display:flex; gap:12px; flex-wrap:wrap;">
         <a href="#contact" class="btn-primary">Work With Me →</a>
+        <a href="#certifications" class="btn-secondary">View Certifications</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- EDUCATION -->
+<section id="education" style="background: var(--bg);">
+  <div class="section-label">Academic Background</div>
+  <h2 class="section-title">Education</h2>
+  <p class="section-sub">Formal academic qualifications in Computer Science and Software Engineering.</p>
+  <div class="edu-grid">
+    <div class="edu-card reveal">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-body">
+        <div class="edu-degree">M.Sc — Software Engineering</div>
+        <div class="edu-school">Nasarawa State University Keffi</div>
+        <div class="edu-desc">Master's degree in Software Engineering — advanced study in software design, architecture, development methodologies and systems engineering.</div>
+      </div>
+    </div>
+    <div class="edu-card reveal">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-body">
+        <div class="edu-degree">B.Tech — Computer Science (IT Option)</div>
+        <div class="edu-school">Federal University of Technology Akure (FUTA)</div>
+        <div class="edu-desc">Bachelor of Technology in Computer Science with Information Technology specialization — covering programming, databases, networks and software development.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="background: var(--bg2);">
+  <div class="section-label">Work Experience</div>
+  <h2 class="section-title">Experience</h2>
+  <p class="section-sub">Professional experience in software development and academia.</p>
+  <div class="timeline">
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <div>
+            <div class="timeline-role">Lecturer — Computer Science & Software Development</div>
+            <div class="timeline-company">
+              <a href="https://lincoln.edu.ng" target="_blank">Lincoln College of Science, Management and Technology</a>
+              · Abuja, Nigeria
+            </div>
+          </div>
+          <div class="timeline-badge">Current</div>
+        </div>
+        <p class="timeline-desc">Teaching computer science and software development courses with an <strong>80% practical skill-based curriculum</strong>. Focused on equipping students with real-world, hands-on skills across all courses — training job creators, not job seekers.</p>
+        <div class="timeline-tags">
+          <span>Web Development</span>
+          <span>Software Engineering</span>
+          <span>Practical Curriculum</span>
+          <span>Code Mentorship</span>
+          <span>Technical Training</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <div>
+            <div class="timeline-role">Full Stack Developer — Freelance</div>
+            <div class="timeline-company">Independent · Nigeria & Remote</div>
+          </div>
+          <div class="timeline-badge active">Active</div>
+        </div>
+        <p class="timeline-desc">Building and deploying full-stack web applications for clients across Nigeria. Projects include a live e-commerce platform (OrangeMallNG), a hospital management system (NS Hospital), a job listing platform and more.</p>
+        <div class="timeline-tags">
+          <span>PHP / Laravel</span>
+          <span>React.js</span>
+          <span>NestJS</span>
+          <span>MySQL</span>
+          <span>Deployment</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- SKILLS -->
-<section id="skills">
+<section id="skills" style="background: var(--bg);">
   <div class="section-label">What I Know</div>
   <h2 class="section-title">Tech Stack</h2>
-  <p class="section-sub">Technologies I work with daily to build full-stack applications.</p>
+  <p class="section-sub">Technologies I use daily to build production-grade full-stack applications.</p>
   <div class="skills-grid">
     <div class="skill-card reveal">
       <div class="skill-category">⚡ Frontend</div>
@@ -105,6 +223,7 @@
         <span class="skill-item">TypeScript</span>
         <span class="skill-item">Tailwind CSS</span>
         <span class="skill-item">HTML5 / CSS3</span>
+        <span class="skill-item">Bootstrap</span>
       </div>
     </div>
     <div class="skill-card reveal">
@@ -114,99 +233,177 @@
         <span class="skill-item">Node.js</span>
         <span class="skill-item">Laravel</span>
         <span class="skill-item">PHP</span>
+        <span class="skill-item">Python</span>
+        <span class="skill-item">Django</span>
         <span class="skill-item">REST APIs</span>
         <span class="skill-item">WebSockets</span>
       </div>
     </div>
     <div class="skill-card reveal">
-      <div class="skill-category">🗄️ Database & Tools</div>
+      <div class="skill-category">🗄️ Database & DevOps</div>
       <div class="skill-items">
         <span class="skill-item">MySQL</span>
         <span class="skill-item">PostgreSQL</span>
+        <span class="skill-item">TypeORM</span>
         <span class="skill-item">Git / GitHub</span>
         <span class="skill-item">Docker</span>
         <span class="skill-item">Vercel</span>
         <span class="skill-item">Railway</span>
+        <span class="skill-item">cPanel</span>
       </div>
     </div>
     <div class="skill-card reveal">
-      <div class="skill-category">🎓 Teaching</div>
+      <div class="skill-category">🤖 AI & Data Science</div>
       <div class="skill-items">
+        <span class="skill-item">Python (Data Science)</span>
+        <span class="skill-item">Keras / Deep Learning</span>
+        <span class="skill-item">Machine Learning</span>
+        <span class="skill-item">SQL for Data Science</span>
+        <span class="skill-item">Web Scraping</span>
+        <span class="skill-item">Selenium</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-category">🔐 Security & Systems</div>
+      <div class="skill-items">
+        <span class="skill-item">Information Security</span>
+        <span class="skill-item">JWT Auth</span>
+        <span class="skill-item">VMware</span>
+        <span class="skill-item">Computer Networks</span>
+        <span class="skill-item">Java (Networks)</span>
+        <span class="skill-item">OOP</span>
+        <span class="skill-item">DSA</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <div class="skill-category">🎓 Teaching & Leadership</div>
+      <div class="skill-items">
+        <span class="skill-item">Agile / Scrum</span>
         <span class="skill-item">Web Dev Curriculum</span>
         <span class="skill-item">Code Mentorship</span>
         <span class="skill-item">Technical Writing</span>
-        <span class="skill-item">Workshops</span>
+        <span class="skill-item">Product Management</span>
+        <span class="skill-item">Business Strategy</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="projects" style="background: var(--bg2);">
   <div class="section-label">My Work</div>
   <h2 class="section-title">Featured Projects</h2>
-  <p class="section-sub">A selection of projects I've built. More coming as I grow my portfolio.</p>
+  <p class="section-sub">Real production systems I've built and deployed for clients and personal use.</p>
   <div class="projects-grid">
 
     <div class="project-card reveal">
-      <div class="project-thumb">
+      <div class="project-thumb" style="background: linear-gradient(135deg, #0e1318, #1a2a1a);">
         <div class="project-thumb-pattern"></div>
-        <span class="project-thumb-icon">🛒</span>
+        <span class="project-thumb-icon">🛍️</span>
         <span class="project-badge">Live</span>
       </div>
       <div class="project-body">
-        <h3>E-Commerce Platform</h3>
-        <p>Full-stack shopping platform with product listings, cart management, user auth and order tracking.</p>
+        <h3>OrangeMallNG — E-Commerce Platform</h3>
+        <p>Modern Nigerian e-commerce platform with full CMS dashboard. Features categories, products, orders, payments, shipping, ads and blog management.</p>
         <div class="project-tags">
-          <span class="project-tag">Next.js</span>
+          <span class="project-tag">PHP</span>
+          <span class="project-tag">MySQL</span>
+          <span class="project-tag">Bootstrap</span>
+          <span class="project-tag">Flutterwave</span>
+          <span class="project-tag">Paystack</span>
+        </div>
+        <div class="project-links">
+          <a href="https://orangemallng.com" target="_blank" class="project-link">Live Demo →</a>
+          <a href="https://github.com/bryhmo" target="_blank" class="project-link">GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-thumb" style="background: linear-gradient(135deg, #0e1318, #1a1a2a);">
+        <div class="project-thumb-pattern"></div>
+        <span class="project-thumb-icon">🏥</span>
+        <span class="project-badge">Live</span>
+      </div>
+      <div class="project-body">
+        <h3>NS Hospital — Hospital Management System</h3>
+        <p>Comprehensive hospital & psychiatry management system with 8 role-based modules. Features EMR, appointments, prescriptions, lab tests, billing and real-time notifications.</p>
+        <div class="project-tags">
+          <span class="project-tag">PHP</span>
+          <span class="project-tag">MySQL</span>
+          <span class="project-tag">Tailwind CSS</span>
+          <span class="project-tag">FPDF</span>
+          <span class="project-tag">PHPMailer</span>
+        </div>
+        <div class="project-links">
+          <a href="https://ns-hospital.com" target="_blank" class="project-link">Live Demo →</a>
+          <a href="https://github.com/bryhmo" target="_blank" class="project-link">GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-thumb" style="background: linear-gradient(135deg, #0e1318, #2a1a0e);">
+        <div class="project-thumb-pattern"></div>
+        <span class="project-thumb-icon">✅</span>
+        <span class="project-badge">Live</span>
+      </div>
+      <div class="project-body">
+        <h3>TodoApp — Full Stack Task Manager</h3>
+        <p>Production full-stack todo app with JWT authentication, CRUD operations, due dates, status filters and role-based access. Built with React + NestJS.</p>
+        <div class="project-tags">
+          <span class="project-tag">React.js</span>
           <span class="project-tag">NestJS</span>
           <span class="project-tag">MySQL</span>
+          <span class="project-tag">JWT</span>
+          <span class="project-tag">Railway</span>
         </div>
         <div class="project-links">
-          <a href="#" class="project-link">Live Demo →</a>
-          <a href="#" class="project-link">GitHub →</a>
+          <a href="https://todo-frontend-isiaka-ibrahim.vercel.app" target="_blank" class="project-link">Live Demo →</a>
+          <a href="https://github.com/bryhmo/todo-frontend" target="_blank" class="project-link">GitHub →</a>
         </div>
       </div>
     </div>
 
     <div class="project-card reveal">
-      <div class="project-thumb">
+      <div class="project-thumb" style="background: linear-gradient(135deg, #0e1318, #1a2a2a);">
         <div class="project-thumb-pattern"></div>
-        <span class="project-thumb-icon">📚</span>
-        <span class="project-badge">Live</span>
+        <span class="project-thumb-icon">💼</span>
+        <span class="project-badge">Built</span>
       </div>
       <div class="project-body">
-        <h3>Learning Management System</h3>
-        <p>LMS platform for educators to create courses, manage students and track learning progress.</p>
+        <h3>JobBoard — Job Listing Platform</h3>
+        <p>Full-featured job listing platform with role-based access for employers and job seekers. Features job application tracking, category filters, email notifications and a blog system.</p>
         <div class="project-tags">
-          <span class="project-tag">Laravel</span>
-          <span class="project-tag">React.js</span>
+          <span class="project-tag">Laravel 10</span>
           <span class="project-tag">MySQL</span>
+          <span class="project-tag">Tailwind CSS</span>
+          <span class="project-tag">Laravel Mail</span>
         </div>
         <div class="project-links">
-          <a href="#" class="project-link">Live Demo →</a>
-          <a href="#" class="project-link">GitHub →</a>
+          <a href="https://github.com/bryhmo" target="_blank" class="project-link">GitHub →</a>
         </div>
       </div>
     </div>
 
     <div class="project-card reveal">
-      <div class="project-thumb">
+      <div class="project-thumb" style="background: linear-gradient(135deg, #0e1318, #2a1a2a);">
         <div class="project-thumb-pattern"></div>
-        <span class="project-thumb-icon">💬</span>
+        <span class="project-thumb-icon">🌐</span>
         <span class="project-badge">Live</span>
       </div>
       <div class="project-body">
-        <h3>Real-Time Chat App</h3>
-        <p>WebSocket-powered chat application with rooms, online presence, and message history.</p>
+        <h3>Portfolio Website</h3>
+        <p>Personal portfolio showcasing projects, skills, certifications and services. Features Flutterwave & Paystack payment integration, contact form and dark modern design.</p>
         <div class="project-tags">
-          <span class="project-tag">React.js</span>
-          <span class="project-tag">Node.js</span>
-          <span class="project-tag">Socket.io</span>
+          <span class="project-tag">HTML5</span>
+          <span class="project-tag">CSS3</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">Vercel</span>
         </div>
         <div class="project-links">
-          <a href="#" class="project-link">Live Demo →</a>
-          <a href="#" class="project-link">GitHub →</a>
+          <a href="https://portfolio-isiaka-ibrahim.vercel.app/" target="_blank" class="project-link">Live Demo →</a>
+          <a href="https://github.com/bryhmo" target="_blank" class="project-link">GitHub →</a>
         </div>
       </div>
     </div>
@@ -214,17 +411,81 @@
   </div>
 </section>
 
+<!-- CERTIFICATIONS -->
+<section id="certifications" style="background: var(--bg);">
+  <div class="section-label">Continuous Learning</div>
+  <h2 class="section-title">Certifications</h2>
+  <p class="section-sub">25+ verified certifications from IBM, Coursera and Udemy across development, AI, security and leadership.</p>
+
+  <!-- IBM / COURSERA -->
+  <div class="cert-group reveal">
+    <div class="cert-group-header">
+      <span class="cert-group-icon">🏛️</span>
+      <span class="cert-group-title">IBM / Coursera</span>
+      <span class="cert-group-count">3 Certificates</span>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-issuer ibm">IBM</div>
+        <div class="cert-name">Databases and SQL for Data Science with Python</div>
+        <a href="https://coursera.org/verify/F8VUHC02CDYA" target="_blank" class="cert-verify">Verify ↗</a>
+      </div>
+      <div class="cert-card">
+        <div class="cert-issuer ibm">IBM</div>
+        <div class="cert-name">Introduction to Deep Learning & Neural Networks with Keras</div>
+        <a href="https://coursera.org/verify/N165M5DZD2W3" target="_blank" class="cert-verify">Verify ↗</a>
+      </div>
+      <div class="cert-card">
+        <div class="cert-issuer ibm">IBM</div>
+        <div class="cert-name">Python for Data Science, AI & Development</div>
+        <a href="https://coursera.org/verify/5FKVZB3V7ZK5" target="_blank" class="cert-verify">Verify ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- UDEMY -->
+  <div class="cert-group reveal">
+    <div class="cert-group-header">
+      <span class="cert-group-icon">🎯</span>
+      <span class="cert-group-title">Udemy</span>
+      <span class="cert-group-count">22 Certificates</span>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Agile Scrum for Beginners & Scrum Master Certification Prep</div><a href="https://ude.my/UC-1b7150ff-c033-4f28-85c5-21f913f31e6e" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Automated Machine Learning for Beginners (Google & Apple)</div><a href="https://ude.my/UC-3f942066-ca63-4544-b579-01006d26c15e" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Becoming an Agile Leader 2024 — Drive Outcomes, Bring Impact</div><a href="https://ude.my/UC-022e226b-d7cb-4410-b282-b68731b4cae3" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">British Social Etiquette</div><a href="https://ude.my/UC-7d95e948-120d-4a82-8c5b-298ae8f70b2b" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">ChatGPT for Product Management & Innovation</div><a href="https://ude.my/UC-fd4a2c87-782e-42b0-9712-42989625c31a" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Computer Networks Fundamentals</div><a href="https://ude.my/UC-463aeee0-59ec-4185-bc1d-643bcdb1d1a9" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">CSS And Javascript Crash Course</div><a href="https://ude.my/UC-d6619209-bb0d-48e0-8cdd-577032493ca5" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">CSS, JavaScript And Python Complete Course</div><a href="https://ude.my/UC-9ac85729-5c45-4b58-bd2d-82c7e28759f2" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Data Structure In-Depth Arrays & Linked List C/C++ DSA</div><a href="https://ude.my/UC-43ff5d26-8411-4cfd-81f0-43002687bd9a" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Executive Diploma in Business Strategy</div><a href="https://ude.my/UC-a11d0985-bb85-4596-a3e0-e35f8ac4a89e" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Executive Diploma in Corporate Entrepreneurship</div><a href="https://ude.my/UC-64666e26-58aa-4a7d-b1ae-433a0100483c" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Information Security Fundamentals</div><a href="https://ude.my/UC-a37a0c2e-3d36-4be1-b648-5f40fcdc6f20" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Master Python Web Scraping & Automation using BS4 & Selenium</div><a href="https://ude.my/UC-81a23462-d8c1-476f-8c6a-aa57c1d21679" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Mastering VMware Workstation for Personal Virtualization</div><a href="https://ude.my/UC-704eb1cd-5826-47a7-b2b2-696aed924580" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Mastering Web Performance: From Novice to Expert</div><a href="https://ude.my/UC-43bb5e40-ca93-4455-83e1-45c1a1a731d3" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Object-Oriented Programming (OOP) — Learn to Code Faster</div><a href="https://ude.my/UC-6bebaead-7b74-4a33-92d6-0f30bffd5fac" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Programming Network Applications in Java</div><a href="https://ude.my/UC-aad75195-b39b-489b-a123-e1f2f3118955" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Python And Django Framework And HTML5 Stack Complete Course</div><a href="https://ude.my/UC-e9947c09-ece8-4f2b-ae23-eea742c1ab2b" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Python Complete Course For Python Beginners</div><a href="https://ude.my/UC-67bceede-5f28-4f25-8296-07cfd224f03b" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">The Python Developer Essentials Immersive Bootcamp</div><a href="https://ude.my/UC-04ff1f1a-3e03-4ad2-9cb5-7022c6b99d31" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">Windows Security: Mastering the Hosts File</div><a href="https://ude.my/UC-ed35694a-c27c-4e70-a125-817f46b9286b" target="_blank" class="cert-verify">Verify ↗</a></div>
+      <div class="cert-card"><div class="cert-issuer udemy">Udemy</div><div class="cert-name">CSS, JavaScript And Python Complete Course</div><a href="https://ude.my/UC-9ac85729-5c45-4b58-bd2d-82c7e28759f2" target="_blank" class="cert-verify">Verify ↗</a></div>
+    </div>
+  </div>
+</section>
+
 <!-- PAYMENT -->
-<section id="payment">
+<section id="payment" style="background: var(--bg2);">
   <div class="payment-wrapper">
     <div class="section-label" style="justify-content:center;">Hire Me</div>
     <h2 class="section-title" style="text-align:center;">Pay for a Project</h2>
     <p style="color:#8aa4b8; text-align:center;">Ready to work together? Send a payment via Flutterwave or Paystack — quick and secure.</p>
-
     <div class="payment-card reveal">
       <h3>Make a Payment</h3>
       <p>Choose your preferred payment method and enter the agreed amount.</p>
-
       <div class="payment-options">
         <div class="payment-option" id="opt-flutterwave" onclick="selectPayment('flutterwave')">
           <div class="opt-label">Option 1</div>
@@ -237,19 +498,14 @@
           <div class="opt-desc">Cards, bank transfer, USSD</div>
         </div>
       </div>
-
       <div class="amount-row">
         <div class="currency-badge">₦</div>
         <input type="number" class="amount-input" id="amount-input" placeholder="Enter amount e.g. 50000" min="1000"/>
       </div>
-
       <input type="text" class="amount-input" id="payer-name" placeholder="Your name" style="margin-bottom:12px; width:100%;"/>
       <input type="email" class="amount-input" id="payer-email" placeholder="Your email address" style="margin-bottom:24px; width:100%;"/>
-
       <button class="btn-pay" onclick="initiatePayment()">Proceed to Payment →</button>
-
       <p class="payment-note">🔒 Payments are processed securely. You will receive a receipt via email.</p>
-
       <div class="payment-logos">
         <div class="pay-logo">Flutterwave</div>
         <div class="pay-logo">Paystack</div>
@@ -260,11 +516,10 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" style="background: var(--bg);">
   <div class="section-label">Get In Touch</div>
   <h2 class="section-title">Let's Work Together</h2>
   <p class="section-sub">Have a project in mind or want to discuss something? I'd love to hear from you.</p>
-
   <div class="contact-grid">
     <div class="contact-info reveal">
       <div class="contact-item">
@@ -275,10 +530,17 @@
         </div>
       </div>
       <div class="contact-item">
+        <div class="contact-icon">📱</div>
+        <div>
+          <div class="contact-item-label">WhatsApp</div>
+          <div class="contact-item-value"><a href="https://wa.me/2347039443182" target="_blank" style="color:var(--accent); text-decoration:none;">+234 703 944 3182</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
         <div class="contact-icon">🌍</div>
         <div>
           <div class="contact-item-label">Location</div>
-          <div class="contact-item-value">Nigeria 🇳🇬 (Available Remotely)</div>
+          <div class="contact-item-value">Abuja, Nigeria 🇳🇬 (Available Remotely)</div>
         </div>
       </div>
       <div class="contact-item">
@@ -296,7 +558,6 @@
         </div>
       </div>
     </div>
-
     <form class="contact-form reveal" onsubmit="handleContactForm(event)">
       <div class="form-row">
         <div class="form-group">
@@ -326,13 +587,16 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="logo">II.</div>
-  <p>© 2026 Isiaka Ibrahim. Built with passion from Nigeria 🇳🇬</p>
-<div class="social-links">
-  <a href="https://github.com/bryhmo" class="social-link" target="_blank">GH</a>
-  <a href="https://www.linkedin.com/in/techwithbrymo" class="social-link" target="_blank">LI</a>
-  <a href="https://twitter.com/codewithbryhmo" class="social-link" target="_blank">TW</a>
-</div>
+  <div class="footer-left">
+    <div class="logo">II.</div>
+    <p>© 2026 Isiaka Ibrahim Abdulroheem · Full Stack Developer & Lecturer · Nigeria 🇳🇬</p>
+  </div>
+  <div class="social-links">
+    <a href="https://github.com/bryhmo" class="social-link" target="_blank">GH</a>
+    <a href="https://www.linkedin.com/in/techwithbrymo" class="social-link" target="_blank">LI</a>
+    <a href="https://twitter.com/codewithbryhmo" class="social-link" target="_blank">TW</a>
+    <a href="https://wa.me/2347039443182" class="social-link" target="_blank">WA</a>
+  </div>
 </footer>
 
 <script src="script.js"></script>
